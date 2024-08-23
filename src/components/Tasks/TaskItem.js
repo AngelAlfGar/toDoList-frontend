@@ -7,7 +7,6 @@ const TaskItem = ({ task }) => {
       await axios.put(`/tasks/${task._id}`, {
         status: task.status === 'pending' ? 'completed' : 'pending'
       });
-      // Refresca la lista de tareas o actualiza el estado del componente
     } catch (err) {
       console.error(err);
     }
