@@ -16,3 +16,14 @@ Este es el frontend para la aplicación de gestión de tareas (Todo List) utiliz
    ```bash
    git clone https://github.com/tu-usuario/todo-frontend.git
 
+2. Navega hasta el repositorio clonado
+
+   ```bash
+   cd toDoList-frontend
+
+## Instalación dependencias
+
+1. Ya en tu repositorio clonado
+
+  ```bash
+  npm install
