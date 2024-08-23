@@ -14,7 +14,7 @@ Este es el frontend para la aplicación de gestión de tareas (Todo List) utiliz
 1. Clona el repositorio en tu máquina local:
 
    ```bash
-   git clone https://github.com/tu-usuario/todo-frontend.git
+   git clone https://github.com/AngelAlfGar/toDoList-frontend.git
    ``` 
 2. Navega hasta el repositorio clonado:
 
