@@ -27,3 +27,8 @@ Este es el frontend para la aplicación de gestión de tareas (Todo List) utiliz
 
   ```bash
   npm install
+
+## Ejecución del proyecto
+
+  ```bash
+  npm start
