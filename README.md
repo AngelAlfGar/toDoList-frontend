@@ -25,8 +25,9 @@ Este es el frontend para la aplicación de gestión de tareas (Todo List) utiliz
 
 1. Ya en tu repositorio clonado:
 
-  ```bash```
+  ```bash
   npm install
+```
 
 ## Ejecución del proyecto
 
