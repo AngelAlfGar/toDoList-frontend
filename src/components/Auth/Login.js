@@ -1,6 +1,6 @@
-// src/components/Auth/Login.js
 import React, { useState } from 'react';
 import { Container, Card, Form, Button, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import axios from '../../axiosConfig';
 
 const Login = () => {
@@ -8,14 +8,16 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('/login', { email, password });
+      const response = await axios.post('/auth/login', { email, password });
       console.log('Login successful:', response.data);
-      // Handle successful login (e.g., redirect to another page)
+      localStorage.setItem('token', response.data.token);
+      navigate('/tasks');
     } catch (err) {
       setError('Invalid credentials');
     } finally {
@@ -31,10 +33,10 @@ const Login = () => {
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={onSubmit}>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Enter email"
+                placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -59,6 +61,14 @@ const Login = () => {
               disabled={loading}
             >
               {loading ? 'Loading...' : 'Login'}
+            </Button>
+
+            <Button
+              variant="link"
+              className="w-100 mt-2"
+              onClick={() => navigate('/register')}
+            >
+              Aún no tienes una cuenta? Registrate aqui
             </Button>
           </Form>
         </Card.Body>

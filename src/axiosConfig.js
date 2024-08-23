@@ -1,15 +1,18 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5000/api', // Asegúrate de que la URL base coincida con la de tu servidor backend
+  baseURL: 'http://localhost:5000/api',
 });
 
-// Interceptor para añadir el token JWT a cada solicitud
 instance.interceptors.request.use(
   config => {
+    console.log({localStorage})
     const token = localStorage.getItem('token');
     if (token) {
+      console.log(token)
       config.headers['x-auth-token'] = token;
+    }else{
+      console.log('no hay token')
     }
     return config;
   },
