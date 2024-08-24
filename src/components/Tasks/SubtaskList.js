@@ -1,5 +1,3 @@
-// src/components/SubtaskList.js
-
 import React, { useEffect, useState } from 'react';
 import axios from '../../axiosConfig';
 import { Table, Button, Modal, Form } from 'react-bootstrap';
