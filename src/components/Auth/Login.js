@@ -68,7 +68,8 @@ const Login = () => {
               className="w-100 mt-2"
               onClick={() => navigate('/register')}
             >
-              Aún no tienes una cuenta? Registrate aqui
+              Aún no tienes una cuenta? | 
+              Registrate aqui
             </Button>
           </Form>
         </Card.Body>

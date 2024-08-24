@@ -12,8 +12,8 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/tasks" element={<TaskList />} />
+        <Route path='/subtasks' element={<SubtaskList />} />
         <Route path="/" element={<Navigate to="/login" />} />
-        <Route path="/subtask" element={<SubtaskList />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </Router>
